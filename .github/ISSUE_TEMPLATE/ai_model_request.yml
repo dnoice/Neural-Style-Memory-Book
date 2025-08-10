@@ -1,0 +1,91 @@
+name: 🧠 AI Model Request
+description: Request a new neural style or AI model
+title: "[AI MODEL] "
+labels: ["ai-model", "enhancement"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Request a new neural style or AI enhancement! 🧠
+        
+        Help us expand our artistic AI capabilities.
+
+  - type: input
+    id: artist-style
+    attributes:
+      label: 🎨 Artist/Style Name
+      description: What artist or art style would you like to see?
+      placeholder: e.g., Salvador Dalí, Art Nouveau, Baroque, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: style-description
+    attributes:
+      label: 📝 Style Description
+      description: Describe the artistic style and its characteristics
+      placeholder: |
+        What makes this style unique?
+        - Visual characteristics
+        - Color palette
+        - Brush techniques
+        - Historical context
+    validations:
+      required: true
+
+  - type: textarea
+    id: reference-images
+    attributes:
+      label: 🖼️ Reference Images
+      description: Links to example artworks or reference images
+      placeholder: |
+        Please provide links to public domain artworks or museum collections.
+        Do not upload copyrighted images.
+
+  - type: dropdown
+    id: style-complexity
+    attributes:
+      label: 🎯 Style Complexity
+      description: How complex do you think this style is to implement?
+      options:
+        - Simple (Basic color/texture changes)
+        - Moderate (Some geometric transformations)
+        - Complex (Advanced pattern recognition needed)
+        - Very Complex (Requires new AI techniques)
+
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: 💡 Use Cases
+      description: How would you use this style?
+      placeholder: |
+        - Portrait photography
+        - Landscape images
+        - Digital art creation
+        - Educational purposes
+
+  - type: checkboxes
+    id: copyright-consideration
+    attributes:
+      label: ⚖️ Copyright Considerations
+      options:
+        - label: The artist's work is in public domain
+          required: false
+        - label: I understand copyright implications for recent artists
+          required: true
+        - label: This is for educational/research purposes
+          required: false
+
+  - type: textarea
+    id: technical-parameters
+    attributes:
+      label: 🛠️ Suggested Parameters
+      description: What adjustable parameters would be useful for this style?
+      placeholder: |
+        Examples:
+        - Brush intensity (0-100%)
+        - Color saturation (50-200%)
+        - Pattern complexity (low/medium/high)
+        - Geometric distortion (0-100%)
+```
