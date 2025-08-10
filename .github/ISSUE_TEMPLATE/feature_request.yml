@@ -1,0 +1,118 @@
+name: 💡 Feature Request
+description: Suggest a new feature or enhancement
+title: "[FEATURE] "
+labels: ["enhancement", "needs-discussion"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature! 💡
+        
+        Your ideas help make Neural Style Memory Book better for everyone.
+
+  - type: textarea
+    id: feature-summary
+    attributes:
+      label: 🎯 Feature Summary
+      description: A brief summary of your feature request
+      placeholder: What feature would you like to see?
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: ❓ Problem Statement
+      description: What problem does this feature solve?
+      placeholder: |
+        Is your feature request related to a problem? Please describe.
+        A clear description of what the problem is.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: 💭 Proposed Solution
+      description: How would you like this feature to work?
+      placeholder: Describe the solution you'd like to see
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 🔄 Alternatives Considered
+      description: Any alternative solutions or features you've considered?
+
+  - type: dropdown
+    id: feature-category
+    attributes:
+      label: 🏷️ Feature Category
+      options:
+        - AI/Neural Style Transfer
+        - User Interface/User Experience
+        - 3D Graphics/Animation
+        - Export/Sharing
+        - Performance
+        - Accessibility
+        - Mobile/PWA
+        - Developer Experience
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: ⭐ Priority
+      description: How important is this feature to you?
+      options:
+        - Low (Nice to have)
+        - Medium (Would improve experience)
+        - High (Significantly impacts usability)
+        - Critical (Essential for my use case)
+
+  - type: checkboxes
+    id: implementation-complexity
+    attributes:
+      label: 🛠️ Implementation Considerations
+      description: What do you think about the implementation? (optional)
+      options:
+        - label: This seems like a simple addition
+        - label: This might require significant changes
+        - label: This could affect performance
+        - label: This needs new dependencies
+        - label: I'm willing to help implement this
+
+  - type: textarea
+    id: user-stories
+    attributes:
+      label: 👤 User Stories
+      description: Describe how users would interact with this feature
+      placeholder: |
+        As a [type of user], I want [goal] so that [benefit].
+        
+        Example scenarios:
+        - As a photographer, I want to batch process multiple images so that I can create a styled portfolio quickly.
+
+  - type: textarea
+    id: mockups
+    attributes:
+      label: 🎨 Mockups/Examples
+      description: Any mockups, examples, or references?
+      placeholder: |
+        Links to similar features in other apps, mockups, or visual examples.
+        You can drag and drop images here.
+
+  - type: textarea
+    id: technical-requirements
+    attributes:
+      label: 🔧 Technical Requirements
+      description: Any specific technical requirements or constraints?
+      placeholder: |
+        - Should work offline
+        - Must be accessible
+        - Performance considerations
+        - Browser compatibility needs
