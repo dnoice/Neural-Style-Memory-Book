@@ -1,0 +1,156 @@
+name: 🐛 Bug Report
+description: Report a bug or unexpected behavior
+title: "[BUG] "
+labels: ["bug", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to report a bug! 🐛
+        
+        Please fill out this template to help us understand and fix the issue quickly.
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+      description: Please confirm you've completed these steps
+      options:
+        - label: I searched existing issues to avoid duplicates
+          required: true
+        - label: I tested with the latest version
+          required: true
+        - label: I tested in multiple browsers (if applicable)
+          required: false
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: 🐛 Bug Description
+      description: A clear and concise description of the bug
+      placeholder: What happened that shouldn't have happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: 🔄 Steps to Reproduce
+      description: Detailed steps to reproduce the behavior
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Upload image '...'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: ✅ Expected Behavior
+      description: What should have happened instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: ❌ Actual Behavior
+      description: What actually happened?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: 🌐 Browser
+      description: Which browser are you using?
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - Other (specify in additional context)
+    validations:
+      required: true
+
+  - type: input
+    id: browser-version
+    attributes:
+      label: Browser Version
+      placeholder: e.g., Chrome 119.0.6045.105
+
+  - type: dropdown
+    id: device-type
+    attributes:
+      label: 📱 Device Type
+      options:
+        - Desktop
+        - Mobile Phone
+        - Tablet
+        - Foldable Device
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: operating-system
+    attributes:
+      label: 💻 Operating System
+      placeholder: e.g., Windows 11, macOS 14, iOS 17, Android 13
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 🚨 Severity
+      description: How severe is this bug?
+      options:
+        - Critical (App doesn't work at all)
+        - High (Major feature broken)
+        - Medium (Feature partially broken)
+        - Low (Minor issue)
+    validations:
+      required: true
+
+  - type: textarea
+    id: console-errors
+    attributes:
+      label: 🔍 Console Errors
+      description: Any error messages in the browser console (F12)
+      render: text
+      placeholder: Copy and paste any error messages here
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 📷 Screenshots
+      description: If applicable, add screenshots to help explain the problem
+      placeholder: Drag and drop images here or use markdown syntax
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 📋 Additional Context
+      description: Any other context about the problem
+      placeholder: |
+        - Were you using any specific image types?
+        - What neural style were you applying?
+        - Any other relevant details?
+
+  - type: checkboxes
+    id: feature-areas
+    attributes:
+      label: 🎯 Affected Features
+      description: Which features are affected by this bug?
+      options:
+        - label: Image upload
+        - label: Neural style transfer
+        - label: Face detection
+        - label: 3D book interface
+        - label: Export functionality
+        - label: PWA features (offline, install)
+        - label: Mobile responsiveness
+        - label: Performance
