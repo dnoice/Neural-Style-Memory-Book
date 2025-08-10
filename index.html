@@ -1,4 +1,36 @@
 <!DOCTYPE html>
+<!--
+╔══════════════════════════════════════════════════════════════════╗
+║                        NEURAL STYLE MEMORY BOOK                              ║
+║                     AI-Powered 3D Photo Album Application                    ║
+╠══════════════════════════════════════════════════════════════════╣
+║ File: index.html                                                             ║
+║ Purpose: Main application scaffold with progressive loading & accessibility  ║
+║ Version: 1.2.0                                                               ║
+║ Author: Neural Style Memory Book Team                                        ║
+║ Created: 2024                                                                ║
+║                                                                              ║
+║ Features:                                                                    ║
+║ • Progressive Web App with service worker support                            ║
+║ • Neural network loading animation                                           ║
+║ • Complete ARIA accessibility implementation                                 ║
+║ • Advanced export and sharing modals                                         ║
+║ • 3D book interface with Three.js integration                                ║
+║ • Real-time style transfer controls                                          ║
+║ • Performance monitoring overlay                                             ║
+║ • Responsive design for all devices including foldables                      ║
+║                                                                              ║
+║ Dependencies:                                                                ║
+║ • Three.js r128 - 3D graphics rendering                                      ║
+║ • GSAP 3.12.2 - Advanced animations                                          ║
+║ • TensorFlow.js 4.10.0 - AI model processing                                 ║
+║ • MobileNet & BlazeFace - Computer vision models                             ║
+║                                                                              ║
+║ Browser Support: Modern browsers with ES6+ and WebGL support                 ║
+║ Mobile: Full touch support with optimized mobile UI                          ║
+║ Offline: Complete functionality via service worker caching                   ║
+╚══════════════════════════════════════════════════════════════════╝
+-->
 <html lang="en">
 <head>
     <!-- Meta Information -->
@@ -9,13 +41,19 @@
     <meta name="author" content="Neural Style Memory Book">
     
     <!-- Progressive Web App -->
-    <meta name="theme-color" content="#1a1a2e">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#6366f1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Neural Style Memory Book">
+    
+    <!-- iOS Splash Screens -->
+    <link rel="apple-touch-startup-image" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 375 812'%3E%3Crect width='375' height='812' fill='%230f0f23'/%3E%3C/svg%3E" media="(device-width: 375px) and (device-height: 812px)">
     
     <!-- Performance Hints -->
     <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     
     <!-- Critical CSS -->
     <link rel="preload" href="css/variables.css" as="style">
@@ -245,25 +283,97 @@
         <div class="perf-item">Memory: <span id="memory-usage">0MB</span></div>
     </div>
 
-    <!-- External Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.10.0/dist/tf.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@2.1.1/dist/mobilenet.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface@0.0.7/dist/blazeface.min.js"></script>
+    <!-- External Libraries - Load in dependency order -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" 
+            integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" 
+            crossorigin="anonymous" 
+            onerror="console.error('Failed to load Three.js')"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" 
+            integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" 
+            crossorigin="anonymous" 
+            onerror="console.error('Failed to load GSAP')"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.10.0/dist/tf.min.js" 
+            onerror="console.error('Failed to load TensorFlow.js')"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@2.1.1/dist/mobilenet.min.js" 
+            onerror="console.error('Failed to load MobileNet')"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface@0.0.7/dist/blazeface.min.js" 
+            onerror="console.error('Failed to load BlazeFace')"></script>
     
-    <!-- Application Script -->
+    <!-- Application Scripts - Load after dependencies -->
+    <script src="js/advanced-styles.js" defer onerror="console.warn('Advanced styles not available')"></script>
+    <script src="js/export-system.js" defer onerror="console.warn('Export system not available')"></script>
     <script src="js/script.js" defer></script>
     
-    <!-- Service Worker Registration -->
+    <!-- Service Worker Registration with Enhanced Error Handling -->
     <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
-                    .then(registration => console.log('SW registered'))
-                    .catch(error => console.log('SW registration failed'));
+        (function() {
+            'use strict';
+            
+            // Service Worker Registration
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', async () => {
+                    try {
+                        const registration = await navigator.serviceWorker.register('/sw.js', {
+                            scope: '/',
+                            updateViaCache: 'none'
+                        });
+                        
+                        console.log('✅ Service Worker registered successfully:', registration.scope);
+                        
+                        // Handle updates
+                        registration.addEventListener('updatefound', () => {
+                            const newWorker = registration.installing;
+                            console.log('🔄 Service Worker update found');
+                            
+                            newWorker.addEventListener('statechange', () => {
+                                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                    console.log('🆕 New Service Worker installed, refresh recommended');
+                                    
+                                    // Show update notification if app is already loaded
+                                    if (window.app && window.app.isInitialized) {
+                                        window.app.showUpdateNotification();
+                                    }
+                                }
+                            });
+                        });
+                        
+                    } catch (error) {
+                        console.warn('⚠️ Service Worker registration failed:', error);
+                        // App continues to work without service worker
+                    }
+                });
+            } else {
+                console.log('ℹ️ Service Workers not supported in this browser');
+            }
+            
+            // Install prompt handling
+            let deferredPrompt;
+            window.addEventListener('beforeinstallprompt', (e) => {
+                console.log('📱 Install prompt available');
+                e.preventDefault();
+                deferredPrompt = e;
+                
+                // Show install button if app is loaded
+                if (window.app) {
+                    window.app.showInstallPrompt = () => {
+                        if (deferredPrompt) {
+                            deferredPrompt.prompt();
+                            deferredPrompt.userChoice.then((choiceResult) => {
+                                console.log('📱 Install prompt result:', choiceResult.outcome);
+                                deferredPrompt = null;
+                            });
+                        }
+                    };
+                }
             });
-        }
+            
+            // Track installation
+            window.addEventListener('appinstalled', () => {
+                console.log('🎉 Neural Style Memory Book installed successfully');
+                deferredPrompt = null;
+            });
+            
+        })();
     </script>
 </body>
 </html>
