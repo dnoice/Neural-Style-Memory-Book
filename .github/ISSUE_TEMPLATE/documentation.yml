@@ -1,0 +1,60 @@
+name: 📚 Documentation
+description: Report missing, unclear, or incorrect documentation
+title: "[DOCS] "
+labels: ["documentation"]
+
+body:
+  - type: dropdown
+    id: doc-type
+    attributes:
+      label: 📋 Documentation Type
+      options:
+        - README updates
+        - API documentation
+        - User guide/tutorial
+        - Code comments
+        - Installation instructions
+        - Troubleshooting guide
+        - Developer documentation
+    validations:
+      required: true
+
+  - type: textarea
+    id: doc-issue
+    attributes:
+      label: 📝 Documentation Issue
+      description: What's wrong with the current documentation?
+      placeholder: |
+        - Information is missing
+        - Instructions are unclear
+        - Content is outdated
+        - Examples don't work
+        - Typos or grammar issues
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-improvement
+    attributes:
+      label: 💡 Suggested Improvement
+      description: How should the documentation be improved?
+      placeholder: |
+        Be specific about what should be added, changed, or removed.
+
+  - type: input
+    id: location
+    attributes:
+      label: 📍 Location
+      description: Where is this documentation located?
+      placeholder: e.g., README.md line 45, /docs/api.md, code comments in script.js
+
+  - type: dropdown
+    id: audience
+    attributes:
+      label: 👥 Target Audience
+      description: Who is this documentation for?
+      options:
+        - End users
+        - Developers/Contributors
+        - Both users and developers
+        - Project maintainers
