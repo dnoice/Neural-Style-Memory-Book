@@ -1,0 +1,115 @@
+name: ⚡ Performance Issue
+description: Report slow performance, high memory usage, or crashes
+title: "[PERFORMANCE] "
+labels: ["performance", "needs-investigation"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a performance issue! ⚡
+        
+        Performance details help us optimize the app for everyone.
+
+  - type: textarea
+    id: performance-issue
+    attributes:
+      label: ⚡ Performance Issue Description
+      description: What performance problem are you experiencing?
+      placeholder: |
+        - App is slow/laggy
+        - High memory usage
+        - Browser crash
+        - Long loading times
+        - Low frame rate
+    validations:
+      required: true
+
+  - type: dropdown
+    id: performance-type
+    attributes:
+      label: 🎯 Performance Type
+      options:
+        - Loading Performance (Initial load time)
+        - Runtime Performance (App responsiveness)
+        - Memory Usage (High RAM consumption)
+        - Battery Drain
+        - Network Usage
+        - Graphics Performance (FPS/rendering)
+    validations:
+      required: true
+
+  - type: textarea
+    id: specific-actions
+    attributes:
+      label: 🔄 Specific Actions
+      description: What were you doing when the performance issue occurred?
+      placeholder: |
+        - Processing multiple large images
+        - Applying specific neural styles
+        - Using 3D book navigation
+        - Exporting images
+    validations:
+      required: true
+
+  - type: input
+    id: device-specs
+    attributes:
+      label: 💻 Device Specifications
+      placeholder: e.g., MacBook Pro M2, 16GB RAM / iPhone 14 Pro / Samsung Galaxy S23
+
+  - type: input
+    id: image-details
+    attributes:
+      label: 📷 Image Details
+      description: Details about images you were processing
+      placeholder: e.g., 5 images, each 4MB, 4000x3000 pixels, JPEG format
+
+  - type: textarea
+    id: performance-metrics
+    attributes:
+      label: 📊 Performance Metrics
+      description: Any specific measurements you noticed?
+      placeholder: |
+        - Task Manager/Activity Monitor readings
+        - Browser DevTools performance data
+        - Frame rate drops
+        - Memory usage peaks
+        - Loading times
+
+  - type: textarea
+    id: browser-devtools
+    attributes:
+      label: 🔍 Browser DevTools Info
+      description: Performance tab data from browser DevTools (if available)
+      render: text
+      placeholder: |
+        Open DevTools (F12) → Performance tab → Record while reproducing issue
+        Any relevant information from the performance profile
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: 🔄 Frequency
+      description: How often does this performance issue occur?
+      options:
+        - Always (Every time)
+        - Often (Most of the time)
+        - Sometimes (Occasionally)
+        - Rarely (Once or twice)
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: workarounds
+    attributes:
+      label: 🛠️ Workarounds Tried
+      description: What have you tried to improve performance?
+      options:
+        - label: Refreshed the page
+        - label: Restarted the browser
+        - label: Cleared browser cache
+        - label: Tried incognito/private mode
+        - label: Disabled browser extensions
+        - label: Used smaller images
+        - label: Tried different browser
