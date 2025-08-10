@@ -1,0 +1,311 @@
+# Neural Style Memory Book - .gitignore
+# Comprehensive gitignore for web application with AI models
+
+# =============================================================================
+# DEVELOPMENT & BUILD FILES
+# =============================================================================
+
+# Node.js dependencies (if using any build tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Build outputs and distribution files
+dist/
+build/
+*.tgz
+*.tar.gz
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# =============================================================================
+# AI MODELS & LARGE FILES
+# =============================================================================
+
+# TensorFlow.js model files (if stored locally)
+models/*.json
+models/*.bin
+models/*/
+
+# Large neural network weights
+*.h5
+*.pb
+*.tflite
+*.onnx
+
+# Training data and datasets
+datasets/
+training_data/
+*.tfrecord
+
+# Generated AI outputs for testing
+test_outputs/
+generated_images/
+
+# =============================================================================
+# USER GENERATED CONTENT
+# =============================================================================
+
+# User uploaded images
+uploads/
+user_images/
+temp_images/
+
+# Export cache
+exports/
+export_cache/
+
+# User data and preferences
+user_data/
+preferences.json
+*.sqlite
+*.db
+
+# =============================================================================
+# SYSTEM & EDITOR FILES
+# =============================================================================
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# =============================================================================
+# IDE & EDITOR CONFIGURATIONS
+# =============================================================================
+
+# Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# JetBrains IDEs
+.idea/
+*.swp
+*.swo
+*~
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# =============================================================================
+# WEB DEVELOPMENT SPECIFIC
+# =============================================================================
+
+# Service Worker cache (development)
+sw-cache/
+
+# Browser cache and storage
+.cache/
+cache/
+
+# Local server logs
+*.log
+logs/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage reports
+coverage/
+*.lcov
+.nyc_output
+
+# =============================================================================
+# DEPLOYMENT & HOSTING
+# =============================================================================
+
+# Netlify
+.netlify/
+
+# Vercel
+.vercel/
+
+# GitHub Pages (if using custom domain)
+CNAME
+
+# Firebase
+.firebase/
+firebase-debug.log
+.firebaserc
+
+# =============================================================================
+# DEVELOPMENT TOOLS
+# =============================================================================
+
+# Webpack
+webpack-stats.json
+
+# Parcel
+.parcel-cache/
+
+# ESLint
+.eslintcache
+
+# Prettier
+.prettierignore
+
+# Jest
+coverage/
+
+# =============================================================================
+# DOCUMENTATION & ASSETS
+# =============================================================================
+
+# Generated documentation
+docs/_build/
+docs/build/
+
+# Screenshots and demos for development
+screenshots/
+demo_images/
+*.gif
+*.mp4
+*.mov
+*.avi
+
+# Design files
+*.psd
+*.ai
+*.sketch
+*.fig
+*.xd
+
+# =============================================================================
+# SECURITY & SENSITIVE FILES
+# =============================================================================
+
+# API keys and secrets
+secrets.json
+config/secrets.js
+.env.secret
+
+# SSL certificates
+*.pem
+*.key
+*.crt
+*.csr
+*.p12
+
+# =============================================================================
+# PERFORMANCE & ANALYTICS
+# =============================================================================
+
+# Bundle analyzer reports
+bundle-report.html
+webpack-bundle-analyzer-report.html
+
+# Lighthouse reports
+lighthouse-report.html
+lighthouse-report.json
+
+# Performance monitoring
+performance-logs/
+
+# =============================================================================
+# BACKUP & TEMPORARY FILES
+# =============================================================================
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+*.tmp
+
+# Temporary files
+temp/
+tmp/
+.temp/
+.tmp/
+
+# Archive files
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# =============================================================================
+# PROJECT SPECIFIC
+# =============================================================================
+
+# Custom neural style models (if proprietary)
+custom_models/
+proprietary_styles/
+
+# User analytics data
+analytics/
+usage_stats.json
+
+# A/B testing configurations
+experiments/
+feature_flags.json
+
+# =============================================================================
+# KEEP THESE FILES (NEGATION PATTERNS)
+# =============================================================================
+
+# Keep essential config files
+!.gitignore
+!README.md
+!LICENSE
+!manifest.json
+!sw.js
+
+# Keep sample/demo images
+!demo/
+!samples/
+!assets/icons/
+
+# Keep documentation
+!docs/README.md
+!docs/*.md
+
+# Keep GitHub templates and workflows
+!.github/
+!.github/workflows/
+!.github/ISSUE_TEMPLATE/
+!.github/PULL_REQUEST_TEMPLATE.md
