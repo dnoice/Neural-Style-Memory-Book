@@ -1,0 +1,181 @@
+{
+  "_metadata": {
+    "_comment": "╔═══════════════════════════════════════════════════════════════════════════════╗",
+    "_description": "║                        NEURAL STYLE MEMORY BOOK                              ║",
+    "_purpose": "║                     Progressive Web App Manifest                             ║",
+    "_separator": "╠═══════════════════════════════════════════════════════════════════════════════╣",
+    "_file": "║ File: manifest.json                                                          ║",
+    "_function": "║ Purpose: PWA configuration for native app-like experience                   ║",
+    "_version": "║ Version: 1.2.0                                                              ║",
+    "_author": "║ Author: Neural Style Memory Book Team                                        ║",
+    "_created": "║ Created: 2024                                                               ║",
+    "_features_start": "║                                                                              ║",
+    "_features_title": "║ Features:                                                                    ║",
+    "_feature_1": "║ • Native app-like installation and appearance                               ║",
+    "_feature_2": "║ • Adaptive icons with neural network animation                              ║",
+    "_feature_3": "║ • File handler integration for image files                                  ║",
+    "_feature_4": "║ • Share target for receiving shared images                                  ║",
+    "_feature_5": "║ • App shortcuts for quick actions                                           ║",
+    "_feature_6": "║ • Edge side panel optimization                                              ║",
+    "_feature_7": "║ • Protocol handler for custom neural style URLs                            ║",
+    "_details_start": "║                                                                              ║",
+    "_detail_1": "║ Installation: Triggers install prompt on supported browsers                ║",
+    "_detail_2": "║ Icons: Scalable SVG with neural network theme and animations               ║",
+    "_detail_3": "║ Screenshots: Responsive for app store listings                             ║",
+    "_footer": "╚═══════════════════════════════════════════════════════════════════════════════╝"
+  },
+
+  "name": "Neural Style Memory Book",
+  "short_name": "NeuralStyleBook",
+  "description": "AI-powered 3D photo album with real-time neural style transfer",
+  "version": "1.2.0",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#6366f1",
+  "background_color": "#0f0f23",
+  "scope": "/",
+  "lang": "en",
+  "dir": "ltr",
+  
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='192' height='192' rx='20' fill='url(%23grad)'/%3E%3Cg transform='translate(96,96)'%3E%3Ccircle cx='-30' cy='-30' r='8' fill='white' opacity='0.9'%3E%3Canimate attributeName='opacity' values='0.9;0.3;0.9' dur='2s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='30' cy='-30' r='8' fill='white' opacity='0.6'%3E%3Canimate attributeName='opacity' values='0.6;1;0.6' dur='2.5s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='-30' cy='30' r='8' fill='white' opacity='0.8'%3E%3Canimate attributeName='opacity' values='0.8;0.4;0.8' dur='1.8s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='30' cy='30' r='8' fill='white' opacity='0.7'%3E%3Canimate attributeName='opacity' values='0.7;1;0.7' dur='2.2s' repeatCount='indefinite'/%3E%3C/circle%3E%3Cpath d='M-30,-30 Q0,-50 30,-30 Q50,0 30,30 Q0,50 -30,30 Q-50,0 -30,-30' stroke='white' stroke-width='2' fill='none' opacity='0.6'%3E%3Canimate attributeName='opacity' values='0.6;0.2;0.6' dur='3s' repeatCount='indefinite'/%3E%3C/path%3E%3Ctext x='0' y='8' text-anchor='middle' fill='white' font-family='Arial, sans-serif' font-size='20' font-weight='bold'%3E🧠%3C/text%3E%3C/g%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='grad512' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1' /%3E%3Cstop offset='50%25' style='stop-color:%238b5cf6;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2306b6d4;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='512' height='512' rx='50' fill='url(%23grad512)'/%3E%3Cg transform='translate(256,256)'%3E%3Ccircle cx='-80' cy='-80' r='20' fill='white' opacity='0.9'%3E%3Canimate attributeName='r' values='20;25;20' dur='2s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='80' cy='-80' r='20' fill='white' opacity='0.8'%3E%3Canimate attributeName='r' values='20;25;20' dur='2.5s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='-80' cy='80' r='20' fill='white' opacity='0.7'%3E%3Canimate attributeName='r' values='20;25;20' dur='1.8s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='80' cy='80' r='20' fill='white' opacity='0.9'%3E%3Canimate attributeName='r' values='20;25;20' dur='2.2s' repeatCount='indefinite'/%3E%3C/circle%3E%3Cpath d='M-80,-80 Q0,-120 80,-80 Q120,0 80,80 Q0,120 -80,80 Q-120,0 -80,-80' stroke='white' stroke-width='4' fill='none' opacity='0.6'%3E%3Canimate attributeName='opacity' values='0.6;0.3;0.6' dur='3s' repeatCount='indefinite'/%3E%3C/path%3E%3Ccircle cx='0' cy='0' r='60' stroke='white' stroke-width='3' fill='none' opacity='0.4'%3E%3Canimate attributeName='r' values='60;70;60' dur='4s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ctext x='0' y='20' text-anchor='middle' fill='white' font-family='Arial, sans-serif' font-size='60' font-weight='bold'%3E🧠%3C/text%3E%3C/g%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 144 144'%3E%3Crect width='144' height='144' rx='15' fill='%236366f1'/%3E%3Cg transform='translate(72,72)'%3E%3Ccircle cx='-20' cy='-20' r='5' fill='white'/%3E%3Ccircle cx='20' cy='-20' r='5' fill='white'/%3E%3Ccircle cx='-20' cy='20' r='5' fill='white'/%3E%3Ccircle cx='20' cy='20' r='5' fill='white'/%3E%3Ctext x='0' y='8' text-anchor='middle' fill='white' font-family='Arial' font-size='16'%3E🧠%3C/text%3E%3C/g%3E%3C/svg%3E",
+      "sizes": "144x144",
+      "type": "image/svg+xml",
+      "purpose": "monochrome"
+    }
+  ],
+  
+  "categories": [
+    "photo",
+    "graphics",
+    "productivity",
+    "utilities",
+    "lifestyle"
+  ],
+  
+  "screenshots": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1280 720'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%230f0f23'/%3E%3Cstop offset='50%25' style='stop-color:%231e1b4b'/%3E%3Cstop offset='100%25' style='stop-color:%23312e81'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1280' height='720' fill='url(%23bg)'/%3E%3Cg transform='translate(640,360)'%3E%3Crect x='-300' y='-200' width='600' height='400' rx='20' fill='rgba(255,255,255,0.1)' stroke='rgba(255,255,255,0.2)'/%3E%3Ctext x='0' y='-150' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3ENeural Style Memory Book%3C/text%3E%3Ctext x='0' y='-120' text-anchor='middle' fill='%23cbd5e1' font-size='16'%3EAI-Powered 3D Photo Album%3C/text%3E%3Crect x='-250' y='-80' width='200' height='150' rx='10' fill='%236366f1' opacity='0.3'/%3E%3Ctext x='-150' y='-10' text-anchor='middle' fill='white' font-size='12'%3EPhoto%3C/text%3E%3Crect x='-30' y='-80' width='280' height='150' rx='10' fill='rgba(255,255,255,0.05)'/%3E%3Ctext x='110' y='-50' text-anchor='middle' fill='white' font-size='14'%3EStyle Transfer Controls%3C/text%3E%3Ccircle cx='-200' cy='100' r='30' fill='%236366f1' opacity='0.8'/%3E%3Ctext x='-200' y='108' text-anchor='middle' fill='white' font-size='12'%3EPrev%3C/text%3E%3Ccircle cx='200' cy='100' r='30' fill='%236366f1' opacity='0.8'/%3E%3Ctext x='200' y='108' text-anchor='middle' fill='white' font-size='12'%3ENext%3C/text%3E%3C/g%3E%3C/svg%3E",
+      "sizes": "1280x720",
+      "type": "image/svg+xml",
+      "form_factor": "wide",
+      "label": "Neural Style Memory Book main interface"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 375 812'%3E%3Cdefs%3E%3ClinearGradient id='mbg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%230f0f23'/%3E%3Cstop offset='100%25' style='stop-color:%231e1b4b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='375' height='812' fill='url(%23mbg)'/%3E%3Cg transform='translate(187.5,100)'%3E%3Ctext x='0' y='0' text-anchor='middle' fill='white' font-size='20' font-weight='bold'%3E🧠 Neural Style%3C/text%3E%3Crect x='-150' y='40' width='300' height='200' rx='15' fill='rgba(255,255,255,0.1)'/%3E%3Ctext x='0' y='65' text-anchor='middle' fill='white' font-size='14'%3EYour Photo%3C/text%3E%3Crect x='-140' y='280' width='80' height='60' rx='8' fill='%236366f1' opacity='0.8'/%3E%3Ctext x='-100' y='315' text-anchor='middle' fill='white' font-size='10'%3EVan Gogh%3C/text%3E%3Crect x='-40' y='280' width='80' height='60' rx='8' fill='%238b5cf6' opacity='0.8'/%3E%3Ctext x='0' y='315' text-anchor='middle' fill='white' font-size='10'%3EPicasso%3C/text%3E%3Crect x='60' y='280' width='80' height='60' rx='8' fill='%2306b6d4' opacity='0.8'/%3E%3Ctext x='100' y='315' text-anchor='middle' fill='white' font-size='10'%3EMonet%3C/text%3E%3C/g%3E%3C/svg%3E",
+      "sizes": "375x812",
+      "type": "image/svg+xml",
+      "form_factor": "narrow",
+      "label": "Mobile view with style selection"
+    }
+  ],
+  
+  "shortcuts": [
+    {
+      "name": "Upload Photos",
+      "short_name": "Upload",
+      "description": "Upload new photos to style",
+      "url": "/?action=upload",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' rx='10' fill='%236366f1'/%3E%3Ctext x='48' y='58' text-anchor='middle' fill='white' font-size='40'%3E📤%3C/text%3E%3C/svg%3E",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Gallery",
+      "short_name": "Gallery",
+      "description": "View your styled photos",
+      "url": "/?action=gallery",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' rx='10' fill='%238b5cf6'/%3E%3Ctext x='48' y='58' text-anchor='middle' fill='white' font-size='40'%3E🖼️%3C/text%3E%3C/svg%3E",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Export",
+      "short_name": "Export",
+      "description": "Export and share your creations",
+      "url": "/?action=export",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' rx='10' fill='%2306b6d4'/%3E%3Ctext x='48' y='58' text-anchor='middle' fill='white' font-size='40'%3E💾%3C/text%3E%3C/svg%3E",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
+        }
+      ]
+    }
+  ],
+  
+  "share_target": {
+    "action": "/share-target/",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "files",
+          "accept": ["image/*"]
+        }
+      ]
+    }
+  },
+  
+  "file_handlers": [
+    {
+      "action": "/",
+      "accept": {
+        "image/jpeg": [".jpg", ".jpeg"],
+        "image/png": [".png"],
+        "image/webp": [".webp"],
+        "image/gif": [".gif"]
+      },
+      "launch_type": "single-client"
+    }
+  ],
+  
+  "protocol_handlers": [
+    {
+      "protocol": "web+neuralstyle",
+      "url": "/handler/?style=%s"
+    }
+  ],
+  
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  
+  "capture_links": "existing-client-navigate",
+  
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  
+  "handle_links": "preferred",
+  
+  "prefer_related_applications": false,
+  
+  "iarc_rating_id": "e84b072d-71b3-4d3e-86ae-31a8ce4e53b7"
+}
