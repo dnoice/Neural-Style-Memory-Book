@@ -1,3 +1,44 @@
+/*
+╔══════════════════════════════════════════════════════════╗
+║                        NEURAL STYLE MEMORY BOOK                    ║
+║                 Responsive Media Queries & Device Support          ║
+╠══════════════════════════════════════════════════════════╣
+║ File: css/queries.css                                              ║
+║ Purpose: Mobile-first responsive design with modern device support ║
+║ Version: 1.2.0                                                     ║
+║ Author: Neural Style Memory Book Team                              ║
+║ Created: 2024                                                      ║
+║                                                                    ║
+║ Features:                                                          ║
+║ • Mobile-first responsive breakpoints (320px to 1920px+)           ║
+║ • Foldable device support (Surface Duo, Galaxy Fold)               ║
+║ • Container queries for component-level responsiveness             ║
+║ • Touch device optimizations                                       ║
+║ • High DPI display support                                         ║
+║ • Accessibility media queries (reduced motion, high contrast)      ║
+║ • Print styles for offline documentation                           ║
+║ • Gaming display support (ultra-wide 32:9)                         ║
+║ • Performance optimizations for lower-end devices                  ║
+║                                                                    ║
+║ Breakpoint Strategy:                                               ║
+║ • 320px-479px: Mobile portrait (Galaxy Fold closed)                ║
+║ • 480px-639px: Mobile landscape                                    ║
+║ • 640px-767px: Tablet portrait                                     ║
+║ • 768px-1023px: Tablet landscape                                   ║
+║ • 1024px-1279px: Desktop                                           ║
+║ • 1280px+: Large desktop                                           ║
+║ • 1920px+: Ultra-wide displays                                     ║
+║                                                                    ║
+║ Special Devices:                                                   ║
+║ • Surface Duo: Dual-screen layout support                          ║
+║ • iPad Pro: Three-column layout                                    ║
+║ • Gaming displays: Optimized ultra-wide layouts                    ║
+║                                                                    ║
+║ Dependencies: variables.css, styles.css                            ║
+║ Browser Support: CSS Media Queries Level 4 with fallbacks          ║
+╚══════════════════════════════════════════════════════════╝
+*/
+
 /* Neural Style Memory Book - Responsive Media Queries */
 /* Mobile-first responsive design with support for foldables and modern devices */
 
